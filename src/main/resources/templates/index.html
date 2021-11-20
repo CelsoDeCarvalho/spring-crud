@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>SPRING CRUD</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link th:href="@{/webjars/bootstrap/4.2.1/css/bootstrap.css}" rel="stylesheet">
+	<script src="../../webjars/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<script src="../../webjars/jquery/3.3.1/js/jquery.min.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="text-center text-muted my-3"><h1>LISTA DE ESTUDANTES</h1></div >
+		<br>
+		<table class="table border table-striped">
+			<thead>
+				<th scope="row">#id</th>
+				<th scope="row">nome</th>
+				<th scope="row">descricao</th>
+				<th scope="row">editar</th>
+				<th scope="row">apagar</th>
+			</thead>
+			<tbody>
+				<tr th:each="curso : ${cursos}">
+					<td th:text="${curso.codigo}"></td>
+					<td th:text="${curso.nome}"></td>
+					<td th:text="${curso.descricao}"></td>
+					<td>
+						<a class="btn btn-primary" th:href="@{/editarCurso/__${curso.codigo}__}" role="button">editar</a>
+					</td>
+					<td>
+						<a class="btn btn-primary" th:href="@{/apagarCurso/__${curso.codigo}__}"
+							role="button">apagar</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+		<br>
+		<a class="btn btn-primary" th:href="@{/novo}" role="button">Novo curso</a>
+		<br>
+
+	</div>
+</body>
+
+</html>
