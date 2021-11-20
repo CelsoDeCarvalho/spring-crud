@@ -1,28 +1,12 @@
-# spring-boot-CRUD-with-thymeleaf
+# spring-boot-CRUD-com-thymeleaf
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-spring boot thymeleaf CRUD example.
-create Database crud_101 in mysql.
+spring boot thymeleaf CRUD exemplo.
 
-set MYSQL user and password in application.properties file.
+adicione as configuracoes do seu banco de dados ao application.properties
 
-Run: localhost:8080
+corra: localhost:8080
 
 
-# Welcome Page
-
-  ![](img/one.png)
-  
-  
-# Main Page
-  ![](img/two.png)
-  
-# Add Course 
-  ![](img/three.png)
-  
-# Update Course
-  ![](img/four.png)
-  
-  
 
